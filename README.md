@@ -20,7 +20,7 @@ No coding experience needed! Just follow the simple steps below.
 1. Open your terminal/command prompt
 2. Go to the folder with this tool:
    ```bash
-   cd /workspaces/csv_to_DDI_json
+   cd /workspaces/CSV_to_Dataverse_JSON
    ```
 
 3. Install the required software:
@@ -46,7 +46,7 @@ Creates: `output_metadata.json`
 
 ---
 
-**Option 2: Add Your Own Author, Email & Description (✓ Tested and Works!)**
+**Option 2: Add Your Own Author, Email & Description**
 ```bash
 python csv_to_dataverse_json.py "Csv_to_json - Citation.csv" "my_dataset.json" \
   --default-author "Your Name" \
@@ -250,7 +250,7 @@ title,author: authorName; authorAffiliation,subject,keyword: keywordValue; keywo
 
 ## Output JSON Format
 
-The script generates **complete Dataverse-compatible DDI JSON** with all system fields, version information, and metadata blocks:
+The script generates **complete Dataverse-compatible JSON** with all system fields, version information, and metadata blocks:
 
 ```json
 {
@@ -346,14 +346,14 @@ The script generates **complete Dataverse-compatible DDI JSON** with all system 
    - POST the generated JSON to: `/api/datasets/{id}/metadata`
 
 2. **In Borealis:**
-   - Follow similar import procedures for DDI JSON formats
+   - Follow similar import procedures for Dataverse JSON formats
 
 ## Troubleshooting
 
 ### I get an error when I run the command
 **Solution 1:** Make sure you're in the right folder:
 ```bash
-cd /workspaces/csv_to_DDI_json
+cd /workspaces/csv_to_dataverse_json
 ```
 
 **Solution 2:** Check that `Csv_to_json - Citation.csv` exists in the folder
@@ -393,4 +393,4 @@ Change `your_file.csv` to your actual filename.
 
 ## Questions or Issues?
 
-See the `GETTING_STARTED.md` file for more detailed instructions, or check the `CHANGES.md` file to see what's new in this version.
+Please create an issue for questions or issues.
