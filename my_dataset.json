@@ -1,29 +1,29 @@
 {
   "id": 1000,
-  "identifier": "FK2/TEST001",
-  "persistentUrl": "https://doi.org/10.70122/FK2/TEST001",
+  "identifier": "FK2/36F0DFAE",
+  "persistentUrl": "https://doi.org/10.70122/FK2/36F0DFAE",
   "protocol": "doi",
   "authority": "10.70122",
   "separator": "/",
-  "publisher": "Demo Dataverse",
+  "publisher": "Dataverse",
   "publicationDate": "2025-12-11",
-  "storageIdentifier": "s3://10.70122/FK2/TEST001",
+  "storageIdentifier": "s3://10.70122/FK2/36F0DFAE",
   "datasetType": "dataset",
   "datasetVersion": {
     "id": 2000,
     "datasetId": 1000,
-    "datasetPersistentId": "doi:10.70122/FK2/TEST001",
+    "datasetPersistentId": "doi:10.70122/FK2/36F0DFAE",
     "datasetType": "dataset",
-    "storageIdentifier": "s3://10.70122:fd707994cef3-c09a16de0610",
+    "storageIdentifier": "s3://10.70122:3c43366f708a-afae963ec527",
     "versionNumber": 1,
     "internalVersionNumber": 1,
     "versionMinorNumber": 0,
     "versionState": "DRAFT",
     "latestVersionPublishingState": "DRAFT",
     "UNF": "",
-    "lastUpdateTime": "2025-12-11T16:51:49Z",
+    "lastUpdateTime": "2025-12-11T17:18:48Z",
     "releaseTime": "",
-    "createTime": "2025-12-11T16:51:49Z",
+    "createTime": "2025-12-11T17:18:48Z",
     "publicationDate": "2025-12-11",
     "citationDate": "2025-12-11",
     "termsOfUse": "",
@@ -49,20 +49,20 @@
             "typeName": "title",
             "multiple": false,
             "typeClass": "primitive",
-            "value": "CSV to JSON Dataset"
+            "value": "Test: csv to json file"
           },
           {
             "typeName": "subtitle",
             "multiple": false,
             "typeClass": "primitive",
-            "value": "Conversion Example"
+            "value": "conversion"
           },
           {
             "typeName": "alternativeTitle",
             "multiple": true,
             "typeClass": "primitive",
             "value": [
-              "alternative1"
+              "alternativeTitle"
             ]
           },
           {
@@ -70,15 +70,14 @@
             "multiple": true,
             "typeClass": "controlledVocabulary",
             "value": [
-              "Social Sciences",
-              "Computer Science"
+              "Social Sciences"
             ]
           },
           {
             "typeName": "notesText",
             "multiple": false,
             "typeClass": "primitive",
-            "value": "Sample notes"
+            "value": "notest1"
           },
           {
             "typeName": "language",
@@ -125,23 +124,64 @@
             "multiple": true,
             "typeClass": "primitive",
             "value": [
-              "Quantitative"
+              "micro"
             ]
           },
           {
-            "typeName": "relatedMaterial",
+            "typeName": "author",
             "multiple": true,
-            "typeClass": "primitive",
+            "typeClass": "compound",
             "value": [
-              "Related material"
+              {
+                "authorName": {
+                  "typeName": "authorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Zeynep Cevik"
+                }
+              }
             ]
           },
           {
-            "typeName": "dataSources",
+            "typeName": "datasetContact",
             "multiple": true,
-            "typeClass": "primitive",
+            "typeClass": "compound",
             "value": [
-              "Statistics source"
+              {
+                "datasetContactName": {
+                  "typeName": "datasetContactName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Zeynep Cevik"
+                },
+                "datasetContactAffiliation": {
+                  "typeName": "datasetContactAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": ""
+                },
+                "datasetContactEmail": {
+                  "typeName": "datasetContactEmail",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "my.email@organization.edu"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "dsDescription",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "dsDescriptionValue": {
+                  "typeName": "dsDescriptionValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "My dataset description"
+                }
+              }
             ]
           }
         ]
