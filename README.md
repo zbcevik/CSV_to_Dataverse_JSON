@@ -8,7 +8,7 @@ No coding experience needed! Just follow the simple steps below.
 
 ## What Does This Tool Do?
 
-✅ Takes your dataset information from a **CSV/Excel file**  
+✅ Takes your dataset information from a **CSV file**  
 ✅ Automatically creates a **JSON file** that Dataverse/Borealis can understand  
 ✅ Fills in missing required information automatically  
 ✅ Ready to upload directly to your data repository  
