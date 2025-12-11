@@ -33,22 +33,60 @@ Convert CSV metadata files to complete Dataverse/Borealis-compatible DDI JSON fo
    - Read `Csv_to_json - Citation.csv`
    - Generate `output_metadata.json`
 
-### Custom File Paths
+### Command Line Options
 
-Edit the main execution section in `csv_to_dataverse_json.py`:
+The script supports command line arguments for flexible usage:
 
-```python
-if __name__ == "__main__":
-    csv_input = 'your_input_file.csv'      # Change input filename
-    json_output = 'your_output_file.json'   # Change output filename
-    
-    csv_to_dataverse_json(csv_input, json_output)
+```bash
+python csv_to_dataverse_json.py [input.csv] [output.json] [options]
 ```
 
-Then run:
+**Default behavior** (if no arguments provided):
 ```bash
 python csv_to_dataverse_json.py
+# Reads: Csv_to_json - Citation.csv
+# Outputs: output_metadata.json
 ```
+
+**Custom file paths:**
+```bash
+python csv_to_dataverse_json.py my_data.csv my_output.json
+```
+
+### Customizing Default Placeholders
+
+When required fields (author name, contact email, dataset description) are missing from your CSV, the script automatically fills them with sensible defaults. You can customize these defaults using:
+
+#### Option 1: Command Line Arguments
+```bash
+python csv_to_dataverse_json.py input.csv output.json \
+  --default-author "Prof. Jane Smith" \
+  --default-email "jane.smith@university.edu" \
+  --default-description "My custom dataset description"
+```
+
+#### Option 2: Environment Variables
+```bash
+export DATAVERSE_DEFAULT_AUTHOR="Prof. Jane Smith"
+export DATAVERSE_DEFAULT_EMAIL="jane.smith@university.edu"
+export DATAVERSE_DEFAULT_DESCRIPTION="My custom dataset description"
+
+python csv_to_dataverse_json.py input.csv output.json
+```
+
+#### Option 3: CSV Values Take Precedence
+If your CSV contains values for `author`, `datasetContact`, or `dsDescription`, they will be used **instead** of defaults:
+
+```csv
+title,author,datasetContact,dsDescription
+"My Dataset","Dr. John Smith; University X","Contact Person; Org; contact@email.com","Data collected in 2024"
+```
+
+**Priority order** (highest to lowest):
+1. Values from CSV (if present)
+2. Command line arguments (--default-*)
+3. Environment variables (DATAVERSE_DEFAULT_*)
+4. Hard-coded defaults (generic placeholders)
 
 ## CSV Format
 

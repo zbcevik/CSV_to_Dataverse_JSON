@@ -1,0 +1,191 @@
+{
+  "id": 1000,
+  "identifier": "FK2/4233630A",
+  "persistentUrl": "https://doi.org/10.70122/FK2/4233630A",
+  "protocol": "doi",
+  "authority": "10.70122",
+  "separator": "/",
+  "publisher": "Dataverse",
+  "publicationDate": "2025-12-11",
+  "storageIdentifier": "s3://10.70122/FK2/4233630A",
+  "datasetType": "dataset",
+  "datasetVersion": {
+    "id": 2000,
+    "datasetId": 1000,
+    "datasetPersistentId": "doi:10.70122/FK2/4233630A",
+    "datasetType": "dataset",
+    "storageIdentifier": "s3://10.70122:3b09d3fa5167-19f1f1064034",
+    "versionNumber": 1,
+    "internalVersionNumber": 1,
+    "versionMinorNumber": 0,
+    "versionState": "DRAFT",
+    "latestVersionPublishingState": "DRAFT",
+    "UNF": "",
+    "lastUpdateTime": "2025-12-11T17:06:05Z",
+    "releaseTime": "",
+    "createTime": "2025-12-11T17:06:05Z",
+    "publicationDate": "2025-12-11",
+    "citationDate": "2025-12-11",
+    "termsOfUse": "",
+    "citationRequirements": "",
+    "conditions": "",
+    "termsOfAccess": "",
+    "license": {
+      "name": "CC0 1.0",
+      "uri": "http://creativecommons.org/publicdomain/zero/1.0",
+      "iconUri": "https://licensebuttons.net/p/zero/1.0/88x31.png",
+      "rightsIdentifier": "CC0-1.0",
+      "rightsIdentifierScheme": "SPDX",
+      "schemeUri": "https://spdx.org/licenses/",
+      "languageCode": "en"
+    },
+    "fileAccessRequest": true,
+    "metadataBlocks": {
+      "citation": {
+        "displayName": "Citation Metadata",
+        "name": "citation",
+        "fields": [
+          {
+            "typeName": "title",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Test: csv to json file"
+          },
+          {
+            "typeName": "subtitle",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "conversion"
+          },
+          {
+            "typeName": "alternativeTitle",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "alternativeTitle"
+            ]
+          },
+          {
+            "typeName": "subject",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Social Sciences"
+            ]
+          },
+          {
+            "typeName": "notesText",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "notest1"
+          },
+          {
+            "typeName": "language",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "English"
+            ]
+          },
+          {
+            "typeName": "productionDate",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2025"
+          },
+          {
+            "typeName": "productionPlace",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "Canada"
+            ]
+          },
+          {
+            "typeName": "distributionDate",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2025"
+          },
+          {
+            "typeName": "depositor",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Zeynep Cevik"
+          },
+          {
+            "typeName": "dateOfDeposit",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2025"
+          },
+          {
+            "typeName": "kindOfData",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "micro"
+            ]
+          },
+          {
+            "typeName": "author",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "authorName": {
+                  "typeName": "authorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Zeynep Cevik"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "datasetContact",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "datasetContactName": {
+                  "typeName": "datasetContactName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "Zeynep Cevik"
+                },
+                "datasetContactAffiliation": {
+                  "typeName": "datasetContactAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": ""
+                },
+                "datasetContactEmail": {
+                  "typeName": "datasetContactEmail",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "no-reply@example.com"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "dsDescription",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "dsDescriptionValue": {
+                  "typeName": "dsDescriptionValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "No description provided."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -5,15 +5,17 @@ Converts CSV metadata files to complete Dataverse-compatible JSON format
 with all system fields, metadata blocks, and file information.
 """
 
+import os
 import csv
 import json
 import re
 import pandas as pd
 from datetime import datetime
 import uuid
+import argparse
 
 
-def ensure_required_fields(dataset_json, row):
+def ensure_required_fields(dataset_json, row, defaults=None):
     """Ensure Dataverse-required fields exist; fill with placeholders if missing."""
     try:
         citation_fields = dataset_json["datasetVersion"]["metadataBlocks"]["citation"]["fields"]
@@ -36,7 +38,10 @@ def ensure_required_fields(dataset_json, row):
         elif 'depositor' in row and not pd.isna(row['depositor']):
             raw_author = str(row['depositor']).strip()
         else:
-            raw_author = 'Unknown Author'
+            # fallback to provided default author, environment, or generic
+            raw_author = (defaults.get('author') if defaults and defaults.get('author') else
+                          os.getenv('DATAVERSE_DEFAULT_AUTHOR') if os.getenv('DATAVERSE_DEFAULT_AUTHOR') else
+                          'Unknown Author')
 
         new_author = {
             "typeName": "author",
@@ -70,9 +75,13 @@ def ensure_required_fields(dataset_json, row):
         if not contact_email and 'datasetContactEmail' in row and not pd.isna(row['datasetContactEmail']):
             contact_email = str(row['datasetContactEmail']).strip()
         if not contact_email:
-            contact_email = 'no-reply@example.com'
+            contact_email = (defaults.get('email') if defaults and defaults.get('email') else
+                             os.getenv('DATAVERSE_DEFAULT_EMAIL') if os.getenv('DATAVERSE_DEFAULT_EMAIL') else
+                             'no-reply@example.com')
         if not contact_name:
-            contact_name = 'Dataset Contact'
+            contact_name = (defaults.get('author') if defaults and defaults.get('author') else
+                            os.getenv('DATAVERSE_DEFAULT_AUTHOR') if os.getenv('DATAVERSE_DEFAULT_AUTHOR') else
+                            'Dataset Contact')
 
         new_contact = {
             "typeName": "datasetContact",
@@ -99,7 +108,9 @@ def ensure_required_fields(dataset_json, row):
         elif 'citation' in row and not pd.isna(row['citation']):
             desc_text = str(row['citation']).strip()
         else:
-            desc_text = 'No description provided.'
+            desc_text = (defaults.get('description') if defaults and defaults.get('description') else
+                         os.getenv('DATAVERSE_DEFAULT_DESCRIPTION') if os.getenv('DATAVERSE_DEFAULT_DESCRIPTION') else
+                         'No description provided.')
 
         new_desc = {
             "typeName": "dsDescription",
@@ -118,7 +129,7 @@ def ensure_required_fields(dataset_json, row):
     return
 
 
-def csv_to_dataverse_json(csv_file_path, output_json_path):
+def csv_to_dataverse_json(csv_file_path, output_json_path, defaults=None):
     """
     Convert CSV file to complete Dataverse JSON format.
     Includes all top-level fields, datasetVersion, license, and metadata blocks.
@@ -340,7 +351,7 @@ def csv_to_dataverse_json(csv_file_path, output_json_path):
             dataset_json["citation"] = str(row['citation']).strip()
 
         # Ensure required fields exist (author, datasetContact email, description)
-        ensure_required_fields(dataset_json, row)
+        ensure_required_fields(dataset_json, row, defaults)
 
         all_datasets.append(dataset_json)
         print(f"✓ Row {idx + 1}: Dataset ID={dataset_id}, Processed {len(fields)} citation fields")
@@ -469,9 +480,21 @@ def create_socialscience_block(row):
 # Main execution
 if __name__ == "__main__":
 
-    # Convert CSV to JSON
-    # Update these paths as needed for your workspace
-    csv_input = 'Csv_to_json - Citation.csv'
-    json_output = 'output_metadata.json'
-    
-    csv_to_dataverse_json(csv_input, json_output)
+    parser = argparse.ArgumentParser(description='Convert CSV to Dataverse JSON with optional defaults')
+    parser.add_argument('csv_input', nargs='?', default='Csv_to_json - Citation.csv', help='Input CSV file')
+    parser.add_argument('json_output', nargs='?', default='output_metadata.json', help='Output JSON file')
+    parser.add_argument('--default-author', dest='default_author', help='Default author name if none provided')
+    parser.add_argument('--default-email', dest='default_email', help='Default contact email if none provided')
+    parser.add_argument('--default-description', dest='default_description', help='Default description if none provided')
+
+    args = parser.parse_args()
+
+    defaults = {}
+    if args.default_author:
+        defaults['author'] = args.default_author
+    if args.default_email:
+        defaults['email'] = args.default_email
+    if args.default_description:
+        defaults['description'] = args.default_description
+
+    csv_to_dataverse_json(args.csv_input, args.json_output, defaults=defaults)
