@@ -13,6 +13,111 @@ from datetime import datetime
 import uuid
 
 
+def ensure_required_fields(dataset_json, row):
+    """Ensure Dataverse-required fields exist; fill with placeholders if missing."""
+    try:
+        citation_fields = dataset_json["datasetVersion"]["metadataBlocks"]["citation"]["fields"]
+    except Exception:
+        return
+
+    def find_field(name):
+        for f in citation_fields:
+            if f.get('typeName') == name:
+                return f
+        return None
+
+    # 1) Author (authorName required)
+    author_field = find_field('author')
+    if not author_field or not author_field.get('value'):
+        # try pull from depositor or CSV 'author' raw string
+        raw_author = None
+        if 'author' in row and not pd.isna(row['author']):
+            raw_author = str(row['author']).split(';')[0].split('|')[0].strip()
+        elif 'depositor' in row and not pd.isna(row['depositor']):
+            raw_author = str(row['depositor']).strip()
+        else:
+            raw_author = 'Unknown Author'
+
+        new_author = {
+            "typeName": "author",
+            "multiple": True,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "authorName": {"typeName": "authorName", "multiple": False, "typeClass": "primitive", "value": raw_author}
+                }
+            ]
+        }
+        # replace or append
+        if author_field:
+            citation_fields.remove(author_field)
+        citation_fields.append(new_author)
+
+    # 2) Dataset contact email (datasetContact -> datasetContactEmail required)
+    contact_field = find_field('datasetContact')
+    if not contact_field or not contact_field.get('value') or not any('datasetContactEmail' in v for v in (contact_field.get('value') or [])):
+        # try CSV values
+        contact_name = None
+        contact_email = None
+        if 'datasetContact' in row and not pd.isna(row['datasetContact']):
+            parts = [p.strip() for p in str(row['datasetContact']).split(';')]
+            if len(parts) >= 1:
+                contact_name = parts[0]
+            if len(parts) >= 3:
+                contact_email = parts[2]
+        if not contact_name and 'depositor' in row and not pd.isna(row['depositor']):
+            contact_name = str(row['depositor']).strip()
+        if not contact_email and 'datasetContactEmail' in row and not pd.isna(row['datasetContactEmail']):
+            contact_email = str(row['datasetContactEmail']).strip()
+        if not contact_email:
+            contact_email = 'no-reply@example.com'
+        if not contact_name:
+            contact_name = 'Dataset Contact'
+
+        new_contact = {
+            "typeName": "datasetContact",
+            "multiple": True,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "datasetContactName": {"typeName": "datasetContactName", "multiple": False, "typeClass": "primitive", "value": contact_name},
+                    "datasetContactAffiliation": {"typeName": "datasetContactAffiliation", "multiple": False, "typeClass": "primitive", "value": str(row.get('datasetContactAffiliation','')).strip()},
+                    "datasetContactEmail": {"typeName": "datasetContactEmail", "multiple": False, "typeClass": "primitive", "value": contact_email}
+                }
+            ]
+        }
+        if contact_field:
+            citation_fields.remove(contact_field)
+        citation_fields.append(new_contact)
+
+    # 3) Description (dsDescription -> dsDescriptionValue required)
+    desc_field = find_field('dsDescription')
+    if not desc_field or not desc_field.get('value') or not any('dsDescriptionValue' in v for v in (desc_field.get('value') or [])):
+        desc_text = None
+        if 'dsDescription' in row and not pd.isna(row['dsDescription']):
+            desc_text = str(row['dsDescription']).split(';')[0].strip()
+        elif 'citation' in row and not pd.isna(row['citation']):
+            desc_text = str(row['citation']).strip()
+        else:
+            desc_text = 'No description provided.'
+
+        new_desc = {
+            "typeName": "dsDescription",
+            "multiple": True,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "dsDescriptionValue": {"typeName": "dsDescriptionValue", "multiple": False, "typeClass": "primitive", "value": desc_text}
+                }
+            ]
+        }
+        if desc_field:
+            citation_fields.remove(desc_field)
+        citation_fields.append(new_desc)
+
+    return
+
+
 def csv_to_dataverse_json(csv_file_path, output_json_path):
     """
     Convert CSV file to complete Dataverse JSON format.
@@ -233,6 +338,9 @@ def csv_to_dataverse_json(csv_file_path, output_json_path):
         # Add citation field if present
         if 'citation' in row and row['citation'] and not pd.isna(row['citation']):
             dataset_json["citation"] = str(row['citation']).strip()
+
+        # Ensure required fields exist (author, datasetContact email, description)
+        ensure_required_fields(dataset_json, row)
 
         all_datasets.append(dataset_json)
         print(f"✓ Row {idx + 1}: Dataset ID={dataset_id}, Processed {len(fields)} citation fields")
