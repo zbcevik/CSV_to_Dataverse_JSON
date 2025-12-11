@@ -1,92 +1,120 @@
-# CSV to Dataverse DDI JSON Converter
+# CSV to Dataverse JSON Converter
 
-Convert CSV metadata files to complete Dataverse/Borealis-compatible DDI JSON format with all required system fields, metadata blocks, and dataset information.
+**Simple tool to convert your Excel/CSV file into a format ready for uploading to Dataverse or Borealis data repositories.**
 
-## Key Features
+No coding experience needed! Just follow the simple steps below.
 
-✅ **Full Dataverse JSON Structure** - Generates complete JSON with top-level fields, datasetVersion, and all metadata blocks  
-✅ **System Fields** - Automatically generates or accepts dataset IDs, identifiers, persistent URLs  
-✅ **License Information** - Includes CC0 license (customizable)  
-✅ **Multiple Metadata Blocks** - Citation, Geospatial, Social Science support  
-✅ **Flexible Input** - Use defaults or provide custom values via CSV  
-✅ **DDI Compatible** - Ready for upload to Dataverse and Borealis
+---
 
-## Installation
+## What Does This Tool Do?
 
-1. **Install required dependencies:**
+✅ Takes your dataset information from a **CSV/Excel file**  
+✅ Automatically creates a **JSON file** that Dataverse/Borealis can understand  
+✅ Fills in missing required information automatically  
+✅ Ready to upload directly to your data repository  
+
+---
+
+## Installation (Do This First)
+
+1. Open your terminal/command prompt
+2. Go to the folder with this tool:
+   ```bash
+   cd /workspaces/csv_to_DDI_json
+   ```
+
+3. Install the required software:
    ```bash
    pip install -r requirements.txt
    ```
 
-## Usage
+---
 
-### Basic Usage
+## Quick Start: Step by Step
 
-1. **Prepare your CSV file** with the proper column headers (see CSV Format section below)
+### Step 1: Prepare Your CSV File
+Create a CSV (Excel) file with your dataset information. See examples below in the **CSV Format** section.
 
-2. **Run the conversion script:**
-   ```bash
-   python csv_to_dataverse_json.py
-   ```
+### Step 2: Run One of These Commands
 
-   This will:
-   - Read `Csv_to_json - Citation.csv`
-   - Generate `output_metadata.json`
-
-### Command Line Options
-
-The script supports command line arguments for flexible usage:
-
-```bash
-python csv_to_dataverse_json.py [input.csv] [output.json] [options]
-```
-
-**Default behavior** (if no arguments provided):
+**Option 1: Super Simple (Uses Default Values)**
 ```bash
 python csv_to_dataverse_json.py
-# Reads: Csv_to_json - Citation.csv
-# Outputs: output_metadata.json
+```
+This reads: `Csv_to_json - Citation.csv`  
+Creates: `output_metadata.json`
+
+---
+
+**Option 2: Add Your Own Author, Email & Description (✓ Tested and Works!)**
+```bash
+python csv_to_dataverse_json.py "Csv_to_json - Citation.csv" "my_dataset.json" \
+  --default-author "Your Name" \
+  --default-email "your.email@organization.edu" \
+  --default-description "What is this dataset about?"
 ```
 
-**Custom file paths:**
+**What to change:**
+- `"Your Name"` → Your name
+- `"your.email@organization.edu"` → Your email
+- `"What is this dataset about?"` → Brief description of your dataset
+
+**Example:**
 ```bash
-python csv_to_dataverse_json.py my_data.csv my_output.json
-```
-
-### Customizing Default Placeholders
-
-When required fields (author name, contact email, dataset description) are missing from your CSV, the script automatically fills them with sensible defaults. You can customize these defaults using:
-
-#### Option 1: Command Line Arguments
-```bash
-python csv_to_dataverse_json.py input.csv output.json \
-  --default-author "Prof. Jane Smith" \
+python csv_to_dataverse_json.py "Csv_to_json - Citation.csv" "my_dataset.json" \
+  --default-author "Dr. Jane Smith" \
   --default-email "jane.smith@university.edu" \
-  --default-description "My custom dataset description"
+  --default-description "Survey data from 2024 research project"
 ```
 
-#### Option 2: Environment Variables
+---
+
+**Option 3: Use Environmental Variables (Save Your Defaults)**
 ```bash
-export DATAVERSE_DEFAULT_AUTHOR="Prof. Jane Smith"
-export DATAVERSE_DEFAULT_EMAIL="jane.smith@university.edu"
-export DATAVERSE_DEFAULT_DESCRIPTION="My custom dataset description"
+export DATAVERSE_DEFAULT_AUTHOR="Your Name"
+export DATAVERSE_DEFAULT_EMAIL="your.email@organization.edu"
+export DATAVERSE_DEFAULT_DESCRIPTION="Your description"
 
 python csv_to_dataverse_json.py input.csv output.json
 ```
 
-#### Option 3: CSV Values Take Precedence
-If your CSV contains values for `author`, `datasetContact`, or `dsDescription`, they will be used **instead** of defaults:
+---
 
-```csv
-title,author,datasetContact,dsDescription
-"My Dataset","Dr. John Smith; University X","Contact Person; Org; contact@email.com","Data collected in 2024"
+**Option 4: Use Custom CSV File**
+```bash
+python csv_to_dataverse_json.py your_file.csv your_output.json
 ```
 
-**Priority order** (highest to lowest):
-1. Values from CSV (if present)
-2. Command line arguments (--default-*)
-3. Environment variables (DATAVERSE_DEFAULT_*)
-4. Hard-coded defaults (generic placeholders)
+---
+
+### Step 3: Check Your Output
+Your new file will be created (e.g., `my_dataset.json` or `output_metadata.json`).
+
+To view it:
+```bash
+cat my_dataset.json
+```
+
+---
+
+## Understanding the Options
+
+| What to Do | Command |
+|-----------|---------|
+| Simple conversion with defaults | `python csv_to_dataverse_json.py` |
+| **Add your info** (Recommended) | `python csv_to_dataverse_json.py input.csv output.json --default-author "Name" --default-email "email@org.edu" --default-description "Description"` |
+| Custom input/output files | `python csv_to_dataverse_json.py my_data.csv result.json` |
+
+---
+
+## How Does the Tool Fill Missing Information?
+
+When your CSV is missing required fields like author name, contact email, or description:
+
+1. **First:** Uses values from your CSV (if you provided them)
+2. **Second:** Uses the values you gave with `--default-author`, `--default-email`, etc.
+3. **Third:** Uses environment variables you set earlier
+4. **Last:** Uses generic placeholders like "Unknown Author" or "No description provided"
 
 ## CSV Format
 
@@ -322,30 +350,47 @@ The script generates **complete Dataverse-compatible DDI JSON** with all system 
 
 ## Troubleshooting
 
-### "File not found" error
-- Ensure your CSV file is in the same directory as the script, or provide the full path
-
-### Missing or incorrect values in output
-- Check that your CSV headers exactly match the field names
-- Verify semicolon and pipe delimiters are used correctly
-- Empty cells are automatically skipped
-
-### Date format issues
-- Dates are converted to year-only format (YYYY) by default
-- Ensure dates contain a valid 4-digit year
-
-## File Structure
-
-```
-csv_to_DDI_json/
-├── csv_to_dataverse_json.py      # Main conversion script
-├── Csv_to_json - Citation.csv    # Input CSV file
-├── output_metadata.json           # Generated output (after running)
-├── requirements.txt               # Python dependencies
-├── README.md                      # This file
-└── samplemetadata.json            # Reference sample output
+### I get an error when I run the command
+**Solution 1:** Make sure you're in the right folder:
+```bash
+cd /workspaces/csv_to_DDI_json
 ```
 
-## License
+**Solution 2:** Check that `Csv_to_json - Citation.csv` exists in the folder
 
-This project is open source and available for research and data curation purposes.
+**Solution 3:** Make sure you installed the required software:
+```bash
+pip install -r requirements.txt
+```
+
+### The output file is empty or missing values
+- Check that your CSV file has the same column names as shown in the examples
+- Make sure column names are spelled exactly right
+- Empty cells in your CSV are automatically skipped (this is fine)
+
+### I want to use my own CSV file name
+Use this command:
+```bash
+python csv_to_dataverse_json.py your_file.csv output.json
+```
+Change `your_file.csv` to your actual filename.
+
+### I need help with dates
+- Dates should be in this format: `YYYY-MM-DD` (example: `2024-12-11`)
+- If you just have the year, that's fine too: `2024`
+
+---
+
+## What's Included
+
+- `csv_to_dataverse_json.py` - Main tool (do not edit)
+- `Csv_to_json - Citation.csv` - Example CSV file
+- `requirements.txt` - List of required software
+- `README.md` - This file (instructions)
+- `TEMPLATE_CSV_WITH_ALL_COLUMNS.csv` - Full template with all possible fields
+
+---
+
+## Questions or Issues?
+
+See the `GETTING_STARTED.md` file for more detailed instructions, or check the `CHANGES.md` file to see what's new in this version.
