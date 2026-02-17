@@ -1,0 +1,945 @@
+[
+  {
+    "id": 1000,
+    "identifier": "FK2/F4979987",
+    "persistentUrl": "doi:FK2/F4979987",
+    "protocol": "doi",
+    "authority": "",
+    "datasetVersion": {
+      "metadataBlocks": {
+        "citation": {
+          "displayName": "Citation Metadata",
+          "name": "citation",
+          "fields": [
+            {
+              "typeName": "title",
+              "multiple": false,
+              "typeClass": "primitive",
+              "value": "Dataset A"
+            },
+            {
+              "typeName": "author",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "authorName": {
+                    "typeName": "authorName",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Doe, John"
+                  },
+                  "authorAffiliation": {
+                    "typeName": "authorAffiliation",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Univ A"
+                  },
+                  "authorIdentifierScheme": {
+                    "typeName": "authorIdentifierScheme",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "ORCID"
+                  },
+                  "authorIdentifier": {
+                    "typeName": "authorIdentifier",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "0000-0001-1111-1111"
+                  }
+                },
+                {
+                  "authorName": {
+                    "typeName": "authorName",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Roe, Jane"
+                  },
+                  "authorAffiliation": {
+                    "typeName": "authorAffiliation",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Univ B"
+                  },
+                  "authorIdentifierScheme": {
+                    "typeName": "authorIdentifierScheme",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "ORCID"
+                  },
+                  "authorIdentifier": {
+                    "typeName": "authorIdentifier",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "0000-0002-2222-2222"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "datasetContact",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "datasetContactName": {
+                    "typeName": "datasetContactName",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Smith, Jim"
+                  },
+                  "datasetContactAffiliation": {
+                    "typeName": "datasetContactAffiliation",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Org"
+                  },
+                  "datasetContactEmail": {
+                    "typeName": "datasetContactEmail",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "smith.j@example.com"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "dsDescription",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "dsDescriptionValue": {
+                    "typeName": "dsDescriptionValue",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "A description for Dataset A"
+                  },
+                  "dsDescriptionDate": {
+                    "typeName": "dsDescriptionDate",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "2019"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "subject",
+              "multiple": true,
+              "typeClass": "controlledVocabulary",
+              "value": [
+                "Physics",
+                "Astronomy"
+              ]
+            },
+            {
+              "typeName": "keyword",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "keywordValue": {
+                    "typeName": "keywordValue",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "climate"
+                  },
+                  "keywordTermURI": {
+                    "typeName": "keywordTermURI",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "http://example.org"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "geospatial": {
+          "displayName": "Geospatial Metadata",
+          "name": "geospatial",
+          "fields": [
+            {
+              "typeName": "geographicCoverage",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "country": {
+                    "typeName": "country",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "United States"
+                  },
+                  "state": {
+                    "typeName": "state",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "California"
+                  },
+                  "city": {
+                    "typeName": "city",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "San Francisco"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "geographicBoundingBox",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "westLongitude": {
+                    "typeName": "westLongitude",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "-122.75"
+                  },
+                  "eastLongitude": {
+                    "typeName": "eastLongitude",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "-122.0"
+                  },
+                  "northLatitude": {
+                    "typeName": "northLatitude",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "38.0"
+                  },
+                  "southLatitude": {
+                    "typeName": "southLatitude",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "37.5"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "socialscience": {
+          "displayName": "Social Science and Humanities Metadata",
+          "name": "socialscience",
+          "fields": [
+            {
+              "typeName": "unitOfAnalysis",
+              "multiple": true,
+              "typeClass": "primitive",
+              "value": [
+                "individual",
+                "household"
+              ]
+            }
+          ]
+        },
+        "astrophysics": {
+          "displayName": "Astronomy and Astrophysics Metadata",
+          "name": "astrophysics",
+          "fields": [
+            {
+              "typeName": "astroType",
+              "multiple": true,
+              "typeClass": "controlledVocabulary",
+              "value": [
+                "Image",
+                "Table"
+              ]
+            }
+          ]
+        },
+        "biomedical": {
+          "displayName": "Life Sciences Metadata",
+          "name": "biomedical",
+          "fields": [
+            {
+              "typeName": "studyDesignType",
+              "multiple": true,
+              "typeClass": "controlledVocabulary",
+              "value": [
+                "Randomized",
+                "Observational"
+              ]
+            }
+          ]
+        },
+        "journal": {
+          "displayName": "Journal Metadata",
+          "name": "journal",
+          "fields": [
+            {
+              "typeName": "journalVolumeIssue",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "journalVolume": {
+                    "typeName": "journalVolume",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "12"
+                  },
+                  "journalIssue": {
+                    "typeName": "journalIssue",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "3"
+                  },
+                  "journalPubDate": {
+                    "typeName": "journalPubDate",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "2018"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "computationalworkflow": {
+          "displayName": "Computational Workflow Metadata",
+          "name": "computationalworkflow",
+          "fields": [
+            {
+              "typeName": "workflowType",
+              "multiple": true,
+              "typeClass": "controlledVocabulary",
+              "value": [
+                "Analysis",
+                "Preprocessing"
+              ]
+            }
+          ]
+        },
+        "3dobjects": {
+          "displayName": "3D Objects Metadata",
+          "name": "3dobjects",
+          "fields": [
+            {
+              "typeName": "3d3DTechnique",
+              "multiple": false,
+              "typeClass": "controlledVocabulary",
+              "value": [
+                "Photogrammetry",
+                "LiDAR"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 1001,
+    "identifier": "FK2/ECE4D746",
+    "persistentUrl": "doi:FK2/ECE4D746",
+    "protocol": "doi",
+    "authority": "",
+    "datasetVersion": {
+      "metadataBlocks": {
+        "citation": {
+          "displayName": "Citation Metadata",
+          "name": "citation",
+          "fields": [
+            {
+              "typeName": "title",
+              "multiple": false,
+              "typeClass": "primitive",
+              "value": "Dataset B"
+            },
+            {
+              "typeName": "author",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "authorName": {
+                    "typeName": "authorName",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Lee, Anna"
+                  },
+                  "authorAffiliation": {
+                    "typeName": "authorAffiliation",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Institute X"
+                  },
+                  "authorIdentifierScheme": {
+                    "typeName": "authorIdentifierScheme",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "ORCID"
+                  },
+                  "authorIdentifier": {
+                    "typeName": "authorIdentifier",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "0000-0003-3333-3333"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "datasetContact",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "datasetContactName": {
+                    "typeName": "datasetContactName",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Brown, Bob"
+                  },
+                  "datasetContactAffiliation": {
+                    "typeName": "datasetContactAffiliation",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "OrgB"
+                  },
+                  "datasetContactEmail": {
+                    "typeName": "datasetContactEmail",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "bob.b@example.org"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "dsDescription",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "dsDescriptionValue": {
+                    "typeName": "dsDescriptionValue",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Dataset B short description"
+                  },
+                  "dsDescriptionDate": {
+                    "typeName": "dsDescriptionDate",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "2021"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "subject",
+              "multiple": true,
+              "typeClass": "controlledVocabulary",
+              "value": [
+                "Earth and Environmental Sciences"
+              ]
+            },
+            {
+              "typeName": "keyword",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "keywordValue": {
+                    "typeName": "keywordValue",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "oceanography"
+                  },
+                  "keywordTermURI": {
+                    "typeName": "keywordTermURI",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "http://example.net"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "geospatial": {
+          "displayName": "Geospatial Metadata",
+          "name": "geospatial",
+          "fields": [
+            {
+              "typeName": "geographicCoverage",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "country": {
+                    "typeName": "country",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Canada"
+                  },
+                  "state": {
+                    "typeName": "state",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "British Columbia"
+                  },
+                  "city": {
+                    "typeName": "city",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Vancouver"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "geographicBoundingBox",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "westLongitude": {
+                    "typeName": "westLongitude",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "-123.5"
+                  },
+                  "eastLongitude": {
+                    "typeName": "eastLongitude",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "-122.9"
+                  },
+                  "northLatitude": {
+                    "typeName": "northLatitude",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "49.4"
+                  },
+                  "southLatitude": {
+                    "typeName": "southLatitude",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "49.1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "socialscience": {
+          "displayName": "Social Science and Humanities Metadata",
+          "name": "socialscience",
+          "fields": [
+            {
+              "typeName": "unitOfAnalysis",
+              "multiple": true,
+              "typeClass": "primitive",
+              "value": [
+                "group",
+                "institution"
+              ]
+            }
+          ]
+        },
+        "astrophysics": {
+          "displayName": "Astronomy and Astrophysics Metadata",
+          "name": "astrophysics",
+          "fields": [
+            {
+              "typeName": "astroType",
+              "multiple": true,
+              "typeClass": "controlledVocabulary",
+              "value": [
+                "Spectrum",
+                "Catalog"
+              ]
+            }
+          ]
+        },
+        "biomedical": {
+          "displayName": "Life Sciences Metadata",
+          "name": "biomedical",
+          "fields": [
+            {
+              "typeName": "studyDesignType",
+              "multiple": true,
+              "typeClass": "controlledVocabulary",
+              "value": [
+                "Observational"
+              ]
+            }
+          ]
+        },
+        "journal": {
+          "displayName": "Journal Metadata",
+          "name": "journal",
+          "fields": [
+            {
+              "typeName": "journalVolumeIssue",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "journalVolume": {
+                    "typeName": "journalVolume",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "5"
+                  },
+                  "journalIssue": {
+                    "typeName": "journalIssue",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "2"
+                  },
+                  "journalPubDate": {
+                    "typeName": "journalPubDate",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "2020"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "computationalworkflow": {
+          "displayName": "Computational Workflow Metadata",
+          "name": "computationalworkflow",
+          "fields": [
+            {
+              "typeName": "workflowType",
+              "multiple": true,
+              "typeClass": "controlledVocabulary",
+              "value": [
+                "Modeling",
+                "Visualization"
+              ]
+            }
+          ]
+        },
+        "3dobjects": {
+          "displayName": "3D Objects Metadata",
+          "name": "3dobjects",
+          "fields": [
+            {
+              "typeName": "3d3DTechnique",
+              "multiple": false,
+              "typeClass": "controlledVocabulary",
+              "value": [
+                "Structured Light",
+                "Laser Scanning"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 1002,
+    "identifier": "FK2/5D148B85",
+    "persistentUrl": "doi:FK2/5D148B85",
+    "protocol": "doi",
+    "authority": "",
+    "datasetVersion": {
+      "metadataBlocks": {
+        "citation": {
+          "displayName": "Citation Metadata",
+          "name": "citation",
+          "fields": [
+            {
+              "typeName": "title",
+              "multiple": false,
+              "typeClass": "primitive",
+              "value": "Dataset C"
+            },
+            {
+              "typeName": "author",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "authorName": {
+                    "typeName": "authorName",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Garcia, Maria"
+                  },
+                  "authorAffiliation": {
+                    "typeName": "authorAffiliation",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Center Y"
+                  },
+                  "authorIdentifierScheme": {
+                    "typeName": "authorIdentifierScheme",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "ORCID"
+                  },
+                  "authorIdentifier": {
+                    "typeName": "authorIdentifier",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "0000-0004-4444-4444"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "datasetContact",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "datasetContactName": {
+                    "typeName": "datasetContactName",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Ng, Li"
+                  },
+                  "datasetContactAffiliation": {
+                    "typeName": "datasetContactAffiliation",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "OrgC"
+                  },
+                  "datasetContactEmail": {
+                    "typeName": "datasetContactEmail",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "li.ng@example.net"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "dsDescription",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "dsDescriptionValue": {
+                    "typeName": "dsDescriptionValue",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Third dataset description"
+                  },
+                  "dsDescriptionDate": {
+                    "typeName": "dsDescriptionDate",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "2018"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "subject",
+              "multiple": true,
+              "typeClass": "controlledVocabulary",
+              "value": [
+                "Computer and Information Science"
+              ]
+            },
+            {
+              "typeName": "keyword",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "keywordValue": {
+                    "typeName": "keywordValue",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "machine learning"
+                  },
+                  "keywordTermURI": {
+                    "typeName": "keywordTermURI",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "http://example.org"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "geospatial": {
+          "displayName": "Geospatial Metadata",
+          "name": "geospatial",
+          "fields": [
+            {
+              "typeName": "geographicCoverage",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "country": {
+                    "typeName": "country",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "United Kingdom"
+                  },
+                  "state": {
+                    "typeName": "state",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "England"
+                  },
+                  "city": {
+                    "typeName": "city",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Oxford"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "geographicBoundingBox",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "westLongitude": {
+                    "typeName": "westLongitude",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "-1.30"
+                  },
+                  "eastLongitude": {
+                    "typeName": "eastLongitude",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "-1.20"
+                  },
+                  "northLatitude": {
+                    "typeName": "northLatitude",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "51.77"
+                  },
+                  "southLatitude": {
+                    "typeName": "southLatitude",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "51.72"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "socialscience": {
+          "displayName": "Social Science and Humanities Metadata",
+          "name": "socialscience",
+          "fields": [
+            {
+              "typeName": "unitOfAnalysis",
+              "multiple": true,
+              "typeClass": "primitive",
+              "value": [
+                "individual"
+              ]
+            }
+          ]
+        },
+        "astrophysics": {
+          "displayName": "Astronomy and Astrophysics Metadata",
+          "name": "astrophysics",
+          "fields": [
+            {
+              "typeName": "astroType",
+              "multiple": true,
+              "typeClass": "controlledVocabulary",
+              "value": [
+                "Table"
+              ]
+            }
+          ]
+        },
+        "biomedical": {
+          "displayName": "Life Sciences Metadata",
+          "name": "biomedical",
+          "fields": [
+            {
+              "typeName": "studyDesignType",
+              "multiple": true,
+              "typeClass": "controlledVocabulary",
+              "value": [
+                "Experimental"
+              ]
+            }
+          ]
+        },
+        "journal": {
+          "displayName": "Journal Metadata",
+          "name": "journal",
+          "fields": [
+            {
+              "typeName": "journalVolumeIssue",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "journalVolume": {
+                    "typeName": "journalVolume",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "7"
+                  },
+                  "journalIssue": {
+                    "typeName": "journalIssue",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "1"
+                  },
+                  "journalPubDate": {
+                    "typeName": "journalPubDate",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "2017"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "computationalworkflow": {
+          "displayName": "Computational Workflow Metadata",
+          "name": "computationalworkflow",
+          "fields": [
+            {
+              "typeName": "workflowType",
+              "multiple": true,
+              "typeClass": "controlledVocabulary",
+              "value": [
+                "ETL",
+                "Analysis"
+              ]
+            }
+          ]
+        },
+        "3dobjects": {
+          "displayName": "3D Objects Metadata",
+          "name": "3dobjects",
+          "fields": [
+            {
+              "typeName": "3d3DTechnique",
+              "multiple": false,
+              "typeClass": "controlledVocabulary",
+              "value": [
+                "Photogrammetry"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+]

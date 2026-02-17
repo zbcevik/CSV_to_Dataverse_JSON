@@ -1,0 +1,169 @@
+{
+  "id": 1000,
+  "identifier": "FK2/3978FD21",
+  "persistentUrl": "doi:FK2/3978FD21",
+  "protocol": "doi",
+  "authority": "",
+  "datasetVersion": {
+    "metadataBlocks": {
+      "citation": {
+        "displayName": "Citation Metadata",
+        "name": "citation",
+        "fields": [
+          {
+            "typeName": "title",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_title"
+          }
+        ]
+      },
+      "geospatial": {
+        "displayName": "Geospatial Metadata",
+        "name": "geospatial",
+        "fields": [
+          {
+            "typeName": "geographicCoverage",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "country": {
+                  "typeName": "country",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_country"
+                },
+                "state": {
+                  "typeName": "state",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_state"
+                },
+                "city": {
+                  "typeName": "city",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_city"
+                },
+                "otherGeographicCoverage": {
+                  "typeName": "otherGeographicCoverage",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_otherGeographicCoverage"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "socialscience": {
+        "displayName": "Social Science and Humanities Metadata",
+        "name": "socialscience",
+        "fields": [
+          {
+            "typeName": "unitOfAnalysis",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_unitOfAnalysis"
+            ]
+          }
+        ]
+      },
+      "astrophysics": {
+        "displayName": "Astronomy and Astrophysics Metadata",
+        "name": "astrophysics",
+        "fields": [
+          {
+            "typeName": "astroType",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Term1",
+              "Term2"
+            ]
+          }
+        ]
+      },
+      "biomedical": {
+        "displayName": "Life Sciences Metadata",
+        "name": "biomedical",
+        "fields": [
+          {
+            "typeName": "studyDesignType",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Term1",
+              "Term2"
+            ]
+          }
+        ]
+      },
+      "journal": {
+        "displayName": "Journal Metadata",
+        "name": "journal",
+        "fields": [
+          {
+            "typeName": "journalVolumeIssue",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "journalVolume": {
+                  "typeName": "journalVolume",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_journalVolume"
+                },
+                "journalIssue": {
+                  "typeName": "journalIssue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_journalIssue"
+                },
+                "journalPubDate": {
+                  "typeName": "journalPubDate",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "2026"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "computationalworkflow": {
+        "displayName": "Computational Workflow Metadata",
+        "name": "computationalworkflow",
+        "fields": [
+          {
+            "typeName": "workflowType",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Term1",
+              "Term2"
+            ]
+          }
+        ]
+      },
+      "3dobjects": {
+        "displayName": "3D Objects Metadata",
+        "name": "3dobjects",
+        "fields": [
+          {
+            "typeName": "3d3DTechnique",
+            "multiple": false,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Term1",
+              "Term2"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

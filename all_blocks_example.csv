@@ -1,0 +1,2 @@
+citation:title,geospatial:geographicCoverage,socialscience:unitOfAnalysis,astrophysics:astroType,biomedical:studyDesignType,journal:journalVolumeIssue,computationalworkflow:workflowType,3dobjects:3d3DTechnique
+sample_title,sample_country;sample_state;sample_city;sample_otherGeographicCoverage,sample_unitOfAnalysis,Term1|Term2,Term1|Term2,sample_journalVolume;sample_journalIssue;sample_journalPubDate,Term1|Term2,Term1|Term2

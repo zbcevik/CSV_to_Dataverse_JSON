@@ -1,0 +1,2 @@
+citation:title,citation:author,citation:datasetContact,citation:dsDescription,geospatial:geographicCoverage
+"Sample Dataset Title","Doe, John;University X;ORCID;0000-0001-2345-6789","Smith, Jane;Org;jsmith@example.com","A short description of the sample dataset;2020","United States;California;San Francisco"

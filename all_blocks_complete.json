@@ -1,0 +1,1162 @@
+{
+  "id": 1000,
+  "identifier": "FK2/384147B1",
+  "persistentUrl": "doi:FK2/384147B1",
+  "protocol": "doi",
+  "authority": "",
+  "datasetVersion": {
+    "metadataBlocks": {
+      "citation": {
+        "displayName": "Citation Metadata",
+        "name": "citation",
+        "fields": [
+          {
+            "typeName": "title",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_title"
+          },
+          {
+            "typeName": "subtitle",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_subtitle"
+          },
+          {
+            "typeName": "alternativeTitle",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_alternativeTitle"
+            ]
+          },
+          {
+            "typeName": "alternativeURL",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_alternativeURL"
+          },
+          {
+            "typeName": "otherId",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "otherIdAgency": {
+                  "typeName": "otherIdAgency",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "ID-12345"
+                },
+                "otherIdValue": {
+                  "typeName": "otherIdValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "ID-12345"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "author",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "authorName": {
+                  "typeName": "authorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_authorName"
+                },
+                "authorAffiliation": {
+                  "typeName": "authorAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_authorAffiliation"
+                },
+                "authorIdentifierScheme": {
+                  "typeName": "authorIdentifierScheme",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "ID-12345"
+                },
+                "authorIdentifier": {
+                  "typeName": "authorIdentifier",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "ID-12345"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "datasetContact",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "datasetContactName": {
+                  "typeName": "datasetContactName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_datasetContactName"
+                },
+                "datasetContactAffiliation": {
+                  "typeName": "datasetContactAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_datasetContactAffiliation"
+                },
+                "datasetContactEmail": {
+                  "typeName": "datasetContactEmail",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "contact@example.org"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "dsDescription",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "dsDescriptionValue": {
+                  "typeName": "dsDescriptionValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_dsDescriptionValue"
+                },
+                "dsDescriptionDate": {
+                  "typeName": "dsDescriptionDate",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "2020"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "subject",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Term1",
+              "Term2"
+            ]
+          },
+          {
+            "typeName": "keyword",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "keywordValue": {
+                  "typeName": "keywordValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_keywordValue"
+                },
+                "keywordTermURI": {
+                  "typeName": "keywordTermURI",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "https://example.org"
+                },
+                "keywordVocabulary": {
+                  "typeName": "keywordVocabulary",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_keywordVocabulary"
+                },
+                "keywordVocabularyURI": {
+                  "typeName": "keywordVocabularyURI",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "https://example.org"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "topicClassification",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "topicClassValue": {
+                  "typeName": "topicClassValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_topicClassValue"
+                },
+                "topicClassVocab": {
+                  "typeName": "topicClassVocab",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_topicClassVocab"
+                },
+                "topicClassVocabURI": {
+                  "typeName": "topicClassVocabURI",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "https://example.org"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "publication",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "publicationRelationType": {
+                  "typeName": "publicationRelationType",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_publicationRelationType"
+                },
+                "publicationCitation": {
+                  "typeName": "publicationCitation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_publicationCitation"
+                },
+                "publicationIDType": {
+                  "typeName": "publicationIDType",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "ID-12345"
+                },
+                "publicationIDNumber": {
+                  "typeName": "publicationIDNumber",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "ID-12345"
+                },
+                "publicationURL": {
+                  "typeName": "publicationURL",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "https://example.org"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "notesText",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_notesText"
+          },
+          {
+            "typeName": "language",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Term1",
+              "Term2"
+            ]
+          },
+          {
+            "typeName": "producer",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "producerName": {
+                  "typeName": "producerName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_producerName"
+                },
+                "producerAffiliation": {
+                  "typeName": "producerAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_producerAffiliation"
+                },
+                "producerAbbreviation": {
+                  "typeName": "producerAbbreviation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_producerAbbreviation"
+                },
+                "producerURL": {
+                  "typeName": "producerURL",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "https://example.org"
+                },
+                "producerLogoURL": {
+                  "typeName": "producerLogoURL",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "https://example.org"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "productionDate",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2020"
+          },
+          {
+            "typeName": "productionPlace",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_productionPlace"
+            ]
+          },
+          {
+            "typeName": "contributor",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "contributorType": {
+                  "typeName": "contributorType",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_contributorType"
+                },
+                "contributorName": {
+                  "typeName": "contributorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_contributorName"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "grantNumber",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "grantNumberAgency": {
+                  "typeName": "grantNumberAgency",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "ID-12345"
+                },
+                "grantNumberValue": {
+                  "typeName": "grantNumberValue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "ID-12345"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "distributor",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "distributorName": {
+                  "typeName": "distributorName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_distributorName"
+                },
+                "distributorAffiliation": {
+                  "typeName": "distributorAffiliation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_distributorAffiliation"
+                },
+                "distributorAbbreviation": {
+                  "typeName": "distributorAbbreviation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_distributorAbbreviation"
+                },
+                "distributorURL": {
+                  "typeName": "distributorURL",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "https://example.org"
+                },
+                "distributorLogoURL": {
+                  "typeName": "distributorLogoURL",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "https://example.org"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "distributionDate",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2020"
+          },
+          {
+            "typeName": "depositor",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_depositor"
+          },
+          {
+            "typeName": "dateOfDeposit",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2026"
+          },
+          {
+            "typeName": "timePeriodCovered",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "timePeriodCoveredStart": {
+                  "typeName": "timePeriodCoveredStart",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_timePeriodCoveredStart"
+                },
+                "timePeriodCoveredEnd": {
+                  "typeName": "timePeriodCoveredEnd",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_timePeriodCoveredEnd"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "dateOfCollection",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "dateOfCollectionStart": {
+                  "typeName": "dateOfCollectionStart",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "2020-01-01"
+                },
+                "dateOfCollectionEnd": {
+                  "typeName": "dateOfCollectionEnd",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "2020-01-01"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "kindOfData",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_kindOfData"
+            ]
+          },
+          {
+            "typeName": "series",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "seriesName": {
+                  "typeName": "seriesName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_seriesName"
+                },
+                "seriesInformation": {
+                  "typeName": "seriesInformation",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_seriesInformation"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "software",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "softwareName": {
+                  "typeName": "softwareName",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_softwareName"
+                },
+                "softwareVersion": {
+                  "typeName": "softwareVersion",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_softwareVersion"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "relatedMaterial",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_relatedMaterial"
+            ]
+          },
+          {
+            "typeName": "relatedDatasets",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_relatedDatasets"
+            ]
+          },
+          {
+            "typeName": "otherReferences",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_otherReferences"
+            ]
+          },
+          {
+            "typeName": "dataSources",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_dataSources"
+            ]
+          },
+          {
+            "typeName": "originOfSources",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_originOfSources"
+          },
+          {
+            "typeName": "characteristicOfSources",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_characteristicOfSources"
+          },
+          {
+            "typeName": "accessToSources",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_accessToSources"
+          }
+        ]
+      },
+      "geospatial": {
+        "displayName": "Geospatial Metadata",
+        "name": "geospatial",
+        "fields": [
+          {
+            "typeName": "geographicCoverage",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "country": {
+                  "typeName": "country",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_country"
+                },
+                "state": {
+                  "typeName": "state",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_state"
+                },
+                "city": {
+                  "typeName": "city",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_city"
+                },
+                "otherGeographicCoverage": {
+                  "typeName": "otherGeographicCoverage",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_otherGeographicCoverage"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "geographicUnit",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_geographicUnit"
+            ]
+          },
+          {
+            "typeName": "geographicBoundingBox",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "westLongitude": {
+                  "typeName": "westLongitude",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_westLongitude"
+                },
+                "eastLongitude": {
+                  "typeName": "eastLongitude",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_eastLongitude"
+                },
+                "northLatitude": {
+                  "typeName": "northLatitude",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_northLatitude"
+                },
+                "southLatitude": {
+                  "typeName": "southLatitude",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_southLatitude"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "socialscience": {
+        "displayName": "Social Science and Humanities Metadata",
+        "name": "socialscience",
+        "fields": [
+          {
+            "typeName": "unitOfAnalysis",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_unitOfAnalysis"
+            ]
+          },
+          {
+            "typeName": "universe",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_universe"
+            ]
+          },
+          {
+            "typeName": "timeMethod",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_timeMethod"
+          },
+          {
+            "typeName": "dataCollector",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_dataCollector"
+          },
+          {
+            "typeName": "collectorTraining",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_collectorTraining"
+          },
+          {
+            "typeName": "frequencyOfDataCollection",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_frequencyOfDataCollection"
+          },
+          {
+            "typeName": "samplingProcedure",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_samplingProcedure"
+          },
+          {
+            "typeName": "targetSampleSize",
+            "multiple": false,
+            "typeClass": "compound",
+            "value": [
+              {
+                "targetSampleActualSize": {
+                  "typeName": "targetSampleActualSize",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_targetSampleActualSize"
+                },
+                "targetSampleSizeFormula": {
+                  "typeName": "targetSampleSizeFormula",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_targetSampleSizeFormula"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "deviationsFromSampleDesign",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_deviationsFromSampleDesign"
+          },
+          {
+            "typeName": "collectionMode",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_collectionMode"
+            ]
+          },
+          {
+            "typeName": "researchInstrument",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_researchInstrument"
+          },
+          {
+            "typeName": "dataCollectionSituation",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_dataCollectionSituation"
+          },
+          {
+            "typeName": "actionsToMinimizeLoss",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_actionsToMinimizeLoss"
+          },
+          {
+            "typeName": "controlOperations",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_controlOperations"
+          },
+          {
+            "typeName": "weighting",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_weighting"
+          },
+          {
+            "typeName": "cleaningOperations",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_cleaningOperations"
+          },
+          {
+            "typeName": "datasetLevelErrorNotes",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_datasetLevelErrorNotes"
+          },
+          {
+            "typeName": "responseRate",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_responseRate"
+          },
+          {
+            "typeName": "samplingErrorEstimates",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_samplingErrorEstimates"
+          },
+          {
+            "typeName": "otherDataAppraisal",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_otherDataAppraisal"
+          },
+          {
+            "typeName": "socialScienceNotes",
+            "multiple": false,
+            "typeClass": "compound",
+            "value": [
+              {
+                "socialScienceNotesType": {
+                  "typeName": "socialScienceNotesType",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_socialScienceNotesType"
+                },
+                "socialScienceNotesSubject": {
+                  "typeName": "socialScienceNotesSubject",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_socialScienceNotesSubject"
+                },
+                "socialScienceNotesText": {
+                  "typeName": "socialScienceNotesText",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_socialScienceNotesText"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "astrophysics": {
+        "displayName": "Astronomy and Astrophysics Metadata",
+        "name": "astrophysics",
+        "fields": [
+          {
+            "typeName": "astroType",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Term1",
+              "Term2"
+            ]
+          },
+          {
+            "typeName": "astroFacility",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_astroFacility"
+            ]
+          },
+          {
+            "typeName": "astroInstrument",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_astroInstrument"
+            ]
+          },
+          {
+            "typeName": "astroObject",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_astroObject"
+            ]
+          },
+          {
+            "typeName": "redshiftType",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_redshiftType"
+          }
+        ]
+      },
+      "biomedical": {
+        "displayName": "Life Sciences Metadata",
+        "name": "biomedical",
+        "fields": [
+          {
+            "typeName": "studyDesignType",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Term1",
+              "Term2"
+            ]
+          },
+          {
+            "typeName": "studyOtherDesignType",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_studyOtherDesignType"
+            ]
+          },
+          {
+            "typeName": "studyFactorType",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Term1",
+              "Term2"
+            ]
+          },
+          {
+            "typeName": "studyOtherFactorType",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_studyOtherFactorType"
+            ]
+          },
+          {
+            "typeName": "studyAssayOrganism",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Term1",
+              "Term2"
+            ]
+          },
+          {
+            "typeName": "studyAssayOtherOrganism",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_studyAssayOtherOrganism"
+            ]
+          },
+          {
+            "typeName": "studyAssayMeasurementType",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Term1",
+              "Term2"
+            ]
+          },
+          {
+            "typeName": "studyAssayOtherMeasurmentType",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_studyAssayOtherMeasurmentType"
+            ]
+          },
+          {
+            "typeName": "studyAssayTechnologyType",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Term1",
+              "Term2"
+            ]
+          },
+          {
+            "typeName": "studyAssayOtherTechnologyType",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_studyAssayOtherTechnologyType"
+            ]
+          },
+          {
+            "typeName": "studyAssayPlatform",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Term1",
+              "Term2"
+            ]
+          },
+          {
+            "typeName": "studyAssayOtherPlatform",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_studyAssayOtherPlatform"
+            ]
+          },
+          {
+            "typeName": "studyAssayCellType",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_studyAssayCellType"
+            ]
+          }
+        ]
+      },
+      "journal": {
+        "displayName": "Journal Metadata",
+        "name": "journal",
+        "fields": [
+          {
+            "typeName": "journalVolumeIssue",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+              {
+                "journalVolume": {
+                  "typeName": "journalVolume",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_journalVolume"
+                },
+                "journalIssue": {
+                  "typeName": "journalIssue",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_journalIssue"
+                },
+                "journalPubDate": {
+                  "typeName": "journalPubDate",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "2020"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "journalArticleType",
+            "multiple": false,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Term1",
+              "Term2"
+            ]
+          }
+        ]
+      },
+      "computationalworkflow": {
+        "displayName": "Computational Workflow Metadata",
+        "name": "computationalworkflow",
+        "fields": [
+          {
+            "typeName": "workflowType",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Term1",
+              "Term2"
+            ]
+          },
+          {
+            "typeName": "workflowCodeRepository",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_workflowCodeRepository"
+            ]
+          },
+          {
+            "typeName": "workflowDocumentation",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_workflowDocumentation"
+            ]
+          }
+        ]
+      },
+      "3dobjects": {
+        "displayName": "3D Objects Metadata",
+        "name": "3dobjects",
+        "fields": [
+          {
+            "typeName": "3d3DTechnique",
+            "multiple": false,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Term1",
+              "Term2"
+            ]
+          },
+          {
+            "typeName": "3dEquipment",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_3dEquipment"
+          },
+          {
+            "typeName": "3dLightingSetup",
+            "multiple": false,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Term1",
+              "Term2"
+            ]
+          },
+          {
+            "typeName": "3dMasterFilePolygonCount",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_3dMasterFilePolygonCount"
+          },
+          {
+            "typeName": "3dExportedFilePolygonCount",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_3dExportedFilePolygonCount"
+            ]
+          },
+          {
+            "typeName": "3dExportedFileFormat",
+            "multiple": false,
+            "typeClass": "controlledVocabulary",
+            "value": [
+              "Term1",
+              "Term2"
+            ]
+          },
+          {
+            "typeName": "3dAltText",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_3dAltText"
+          },
+          {
+            "typeName": "3dMaterialComposition",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+              "sample_3dMaterialComposition"
+            ]
+          },
+          {
+            "typeName": "3dObjectDimensions",
+            "multiple": false,
+            "typeClass": "compound",
+            "value": [
+              {
+                "3dLength": {
+                  "typeName": "3dLength",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_3dLength"
+                },
+                "3dWidth": {
+                  "typeName": "3dWidth",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "ID-12345"
+                },
+                "3dHeight": {
+                  "typeName": "3dHeight",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_3dHeight"
+                },
+                "3dWeight": {
+                  "typeName": "3dWeight",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_3dWeight"
+                },
+                "3dUnit": {
+                  "typeName": "3dUnit",
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "value": "sample_3dUnit"
+                }
+              }
+            ]
+          },
+          {
+            "typeName": "3dHandling",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "sample_3dHandling"
+          }
+        ]
+      }
+    }
+  }
+}
