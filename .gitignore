@@ -1,0 +1,16 @@
+# Private configuration
+config.ini
+config.*.ini
+!config.sample.ini
+.env
+
+# Local inputs and outputs
+work/
+
+# Python environment and cache
+.venv/
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store

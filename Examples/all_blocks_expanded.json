@@ -1,8 +1,8 @@
 [
   {
     "id": 1000,
-    "identifier": "FK2/F4979987",
-    "persistentUrl": "doi:FK2/F4979987",
+    "identifier": "FK2/1A5C03C4",
+    "persistentUrl": "doi:FK2/1A5C03C4",
     "protocol": "doi",
     "authority": "",
     "datasetVersion": {
@@ -38,7 +38,7 @@
                   "authorIdentifierScheme": {
                     "typeName": "authorIdentifierScheme",
                     "multiple": false,
-                    "typeClass": "primitive",
+                    "typeClass": "controlledVocabulary",
                     "value": "ORCID"
                   },
                   "authorIdentifier": {
@@ -64,7 +64,7 @@
                   "authorIdentifierScheme": {
                     "typeName": "authorIdentifierScheme",
                     "multiple": false,
-                    "typeClass": "primitive",
+                    "typeClass": "controlledVocabulary",
                     "value": "ORCID"
                   },
                   "authorIdentifier": {
@@ -129,8 +129,7 @@
               "multiple": true,
               "typeClass": "controlledVocabulary",
               "value": [
-                "Physics",
-                "Astronomy"
+                "Physics"
               ]
             },
             {
@@ -169,7 +168,7 @@
                   "country": {
                     "typeName": "country",
                     "multiple": false,
-                    "typeClass": "primitive",
+                    "typeClass": "controlledVocabulary",
                     "value": "United States"
                   },
                   "state": {
@@ -261,8 +260,8 @@
               "multiple": true,
               "typeClass": "controlledVocabulary",
               "value": [
-                "Randomized",
-                "Observational"
+                "Randomized Controlled Trial",
+                "Not Specified"
               ]
             }
           ]
@@ -309,8 +308,8 @@
               "multiple": true,
               "typeClass": "controlledVocabulary",
               "value": [
-                "Analysis",
-                "Preprocessing"
+                "Jupyter Notebook",
+                "Bash Script"
               ]
             }
           ]
@@ -323,10 +322,7 @@
               "typeName": "3d3DTechnique",
               "multiple": false,
               "typeClass": "controlledVocabulary",
-              "value": [
-                "Photogrammetry",
-                "LiDAR"
-              ]
+              "value": "Photogrammetry"
             }
           ]
         }
@@ -335,8 +331,8 @@
   },
   {
     "id": 1001,
-    "identifier": "FK2/ECE4D746",
-    "persistentUrl": "doi:FK2/ECE4D746",
+    "identifier": "FK2/00E20228",
+    "persistentUrl": "doi:FK2/00E20228",
     "protocol": "doi",
     "authority": "",
     "datasetVersion": {
@@ -372,7 +368,7 @@
                   "authorIdentifierScheme": {
                     "typeName": "authorIdentifierScheme",
                     "multiple": false,
-                    "typeClass": "primitive",
+                    "typeClass": "controlledVocabulary",
                     "value": "ORCID"
                   },
                   "authorIdentifier": {
@@ -476,7 +472,7 @@
                   "country": {
                     "typeName": "country",
                     "multiple": false,
-                    "typeClass": "primitive",
+                    "typeClass": "controlledVocabulary",
                     "value": "Canada"
                   },
                   "state": {
@@ -568,7 +564,7 @@
               "multiple": true,
               "typeClass": "controlledVocabulary",
               "value": [
-                "Observational"
+                "Not Specified"
               ]
             }
           ]
@@ -615,8 +611,8 @@
               "multiple": true,
               "typeClass": "controlledVocabulary",
               "value": [
-                "Modeling",
-                "Visualization"
+                "Jupyter Notebook",
+                "R Notebook"
               ]
             }
           ]
@@ -629,10 +625,7 @@
               "typeName": "3d3DTechnique",
               "multiple": false,
               "typeClass": "controlledVocabulary",
-              "value": [
-                "Structured Light",
-                "Laser Scanning"
-              ]
+              "value": "Structured Light"
             }
           ]
         }
@@ -641,8 +634,8 @@
   },
   {
     "id": 1002,
-    "identifier": "FK2/5D148B85",
-    "persistentUrl": "doi:FK2/5D148B85",
+    "identifier": "FK2/16AB65CC",
+    "persistentUrl": "doi:FK2/16AB65CC",
     "protocol": "doi",
     "authority": "",
     "datasetVersion": {
@@ -678,7 +671,7 @@
                   "authorIdentifierScheme": {
                     "typeName": "authorIdentifierScheme",
                     "multiple": false,
-                    "typeClass": "primitive",
+                    "typeClass": "controlledVocabulary",
                     "value": "ORCID"
                   },
                   "authorIdentifier": {
@@ -782,7 +775,7 @@
                   "country": {
                     "typeName": "country",
                     "multiple": false,
-                    "typeClass": "primitive",
+                    "typeClass": "controlledVocabulary",
                     "value": "United Kingdom"
                   },
                   "state": {
@@ -872,7 +865,7 @@
               "multiple": true,
               "typeClass": "controlledVocabulary",
               "value": [
-                "Experimental"
+                "Other"
               ]
             }
           ]
@@ -919,8 +912,8 @@
               "multiple": true,
               "typeClass": "controlledVocabulary",
               "value": [
-                "ETL",
-                "Analysis"
+                "Bash Script",
+                "Jupyter Notebook"
               ]
             }
           ]
@@ -933,9 +926,7 @@
               "typeName": "3d3DTechnique",
               "multiple": false,
               "typeClass": "controlledVocabulary",
-              "value": [
-                "Photogrammetry"
-              ]
+              "value": "Photogrammetry"
             }
           ]
         }

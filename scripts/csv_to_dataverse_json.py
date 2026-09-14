@@ -11,11 +11,11 @@ values (for example: "Name;Affiliation;ORCID | Name2;Aff2;ORCID2").
 Usage:
   python csv_to_dataverse_json.py input.csv output.json
 
-This script follows the patterns in the example `csv_to_dataverse_json (1).py`
-but automatically uses `all-metadata-blocks.json` to build metadata blocks.
+This script uses metadata block definitions to build metadata blocks.
 """
 
 import argparse
+from pathlib import Path
 import json
 import os
 import re
@@ -24,7 +24,10 @@ from datetime import datetime
 import pandas as pd
 
 
-def load_metadata_blocks(def_path="all-metadata-blocks.json"):
+DEFAULT_METADATA_PATH = Path(__file__).resolve().parent.parent / "Examples" / "metadata" / "all-metadata-blocks.json"
+
+
+def load_metadata_blocks(def_path=DEFAULT_METADATA_PATH):
     with open(def_path, "r", encoding="utf-8") as fh:
         raw = json.load(fh)
 
@@ -73,7 +76,13 @@ def parse_compound_field(value, field_def):
                 val = parts[i]
                 if child.lower().endswith('date'):
                     val = format_date_to_year(val)
-                obj[child] = {"typeName": child, "multiple": False, "typeClass": "primitive", "value": val}
+                child_def = field_def["childFields"][child]
+                multiple = child_def.get("multiple", False)
+                type_class = child_def.get("typeClass") or (
+                    "controlledVocabulary" if child_def.get("isControlledVocabulary") else "primitive"
+                )
+                obj[child] = {"typeName": child, "multiple": multiple,
+                              "typeClass": type_class, "value": [val] if multiple else val}
         if obj:
             result.append(obj)
     return result
@@ -102,7 +111,10 @@ def build_field_entry(field_name, raw_value, block_def):
         if multiple:
             entry["value"] = [v.strip() for v in str(raw_value).split("|") if v.strip()]
         else:
-            entry["value"] = [v.strip() for v in str(raw_value).split("|") if v.strip()]
+            values = [v.strip() for v in str(raw_value).split("|") if v.strip()]
+            if len(values) > 1:
+                raise ValueError(f"{field_name} accepts only one value; received {raw_value!r}")
+            entry["value"] = values[0] if values else ""
     else:
         if multiple:
             entry["value"] = [v.strip() for v in str(raw_value).split("|") if v.strip()]
@@ -116,7 +128,7 @@ def build_field_entry(field_name, raw_value, block_def):
     return entry if entry.get("value") not in (None, [], "") else None
 
 
-def csv_to_dataverse_json(csv_path, out_path, metadata_def_path="all-metadata-blocks.json", defaults=None, verbose=False):
+def csv_to_dataverse_json(csv_path, out_path, metadata_def_path=DEFAULT_METADATA_PATH, defaults=None, verbose=False):
     blocks = load_metadata_blocks(metadata_def_path)
 
     df = pd.read_csv(csv_path)
@@ -239,7 +251,7 @@ def main():
     parser = argparse.ArgumentParser(description="Convert CSV to Dataverse JSON using metadata block definitions")
     parser.add_argument("csv_input", help="Input CSV file")
     parser.add_argument("json_output", help="Output JSON file")
-    parser.add_argument("--metadef", default="all-metadata-blocks.json", help="Metadata blocks definition JSON")
+    parser.add_argument("--metadef", default=DEFAULT_METADATA_PATH, help="Metadata blocks definition JSON")
     args = parser.parse_args()
 
     csv_to_dataverse_json(args.csv_input, args.json_output, metadata_def_path=args.metadef)
